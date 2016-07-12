@@ -1,0 +1,1 @@
+"C:\MongoDB\mongod.exe" --config "%cd%\mongod.cfg"

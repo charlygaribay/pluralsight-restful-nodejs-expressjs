@@ -1,16 +1,16 @@
 var express = require('express');
+var bodyParser = require('body-parser');
+
 var app = express();
+
 var port = process.env.PORT || 3000;
-var bookRouter = express.Router(); 
 
-bookRouter.route('/books')
-    .get(function(req, res) {
-        var responseJson = { hello: 'This is my api' };
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 
-        res.json(responseJson);        
-    });
+bookRouter = require('./routes/bookRoutes')();
 
-app.use('/api', bookRouter);
+app.use('/api/books', bookRouter);
 
 app.get('/', function(req, res) {
     res.send('Welcome to my API');

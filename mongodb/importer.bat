@@ -1,0 +1,1 @@
+"C:\MongoDB\mongo.exe" bookAPI < "%cd%\booksJson.js"
