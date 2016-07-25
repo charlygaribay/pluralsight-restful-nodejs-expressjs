@@ -12,8 +12,13 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
+    "gulp-mocha": "^2.2.0",
+    "mongoose": "^4.5.4",
+    "should": "^10.0.0",
+    "sinon": "^1.17.4"
+  },
+  "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-nodemon": "^2.1.0",
-    "mongoose": "^4.5.4"
+    "gulp-nodemon": "^2.1.0"
   }
 }
