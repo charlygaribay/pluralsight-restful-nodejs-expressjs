@@ -1,7 +1,14 @@
 var express = require('express');
 var mongoose = require('mongoose');
-var db = mongoose.connect('mongodb://localhost/bookAPI');
+var db;
 var Book = require('../models/bookModel');
+
+if (process.env.ENV === 'Test') {
+    db = mongoose.connect('mongodb://localhost/bookAPI_test');
+}
+else {
+    db = mongoose.connect('mongodb://localhost/bookAPI');
+}
 
 var routes = function() {
     var bookRouter = express.Router();
